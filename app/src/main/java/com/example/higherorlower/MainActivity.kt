@@ -35,6 +35,7 @@ class MainActivity : AppCompatActivity() {
         lowerBackground.setImageResource(R.drawable.white)
         highBackGround.setImageResource(R.drawable.white)
         currentRandom = Random().nextInt(20)
+        currentRandom += 1
         newGameButton.setOnClickListener {
             display.setImageResource(R.drawable.higherorlower)
             currentRandom = 0
@@ -61,6 +62,7 @@ class MainActivity : AppCompatActivity() {
             highBackGround.setImageResource(R.drawable.white)
             if(!flag2){
                 currentRandom = Random().nextInt(20)
+                currentRandom += 1
                 when (currentRandom) {
                     1 -> display.setImageResource(R.drawable.one)
                     2 -> display.setImageResource(R.drawable.tqo)
@@ -88,6 +90,7 @@ class MainActivity : AppCompatActivity() {
             else if(flag){
                 previousRandom = currentRandom
                 currentRandom = Random().nextInt(20)
+                currentRandom += 1
                 when (currentRandom) {
                     1 -> display.setImageResource(R.drawable.one)
                     2 -> display.setImageResource(R.drawable.tqo)
